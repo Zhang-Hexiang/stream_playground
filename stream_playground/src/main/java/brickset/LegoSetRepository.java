@@ -21,7 +21,7 @@ public class LegoSetRepository extends Repository<LegoSet> {
         legoSetRepository.printLegoSetTagIncludeCartoon();
         piecesGreaterThan100 = legoSetRepository.countLegoSetGreaterThan100Pieces();
         System.out.println(piecesGreaterThan100);
-        legoSetRepository.countTotalPieces();
+        legoSetRepository.printTotalPieces();
         legoSetRepository.printLegoSetWithHeightGreatThan20();
     }
 
@@ -78,7 +78,7 @@ public class LegoSetRepository extends Repository<LegoSet> {
     /**
      * print the summary of all LEGO sets' pieces
      */
-    public void countTotalPieces(){
+    public void printTotalPieces(){
         List<LegoSet> list = getAll();
         int totalPieces;
         totalPieces = list.stream()
